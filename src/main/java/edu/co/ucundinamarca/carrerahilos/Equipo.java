@@ -5,10 +5,27 @@
  */
 package edu.co.ucundinamarca.carrerahilos;
 
+import java.util.List;
+
 /**
  *
  * @author Camilo Preciado
  */
-public class Equipo {
+
+public class Equipo{
     
+    private String posicion;
+    
+    public Equipo(String posicion) {
+        this.posicion = posicion;
+    }
+    
+    public String getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    } 
+
 }
