@@ -17,64 +17,55 @@ import java.util.logging.Logger;
 public class Principal {
     
     public Principal(){
-        Equipo e1 = new Equipo("Primer Corredor");
-        Equipo e2 = new Equipo("Segundo Corredor");
-        Equipo e3 = new Equipo("Tercer Corredor");
-        
-        List<Equipo> inicio = new ArrayList<>();
-        inicio.add(e1);
-        
-        List<Equipo> intermedio = new ArrayList<>();
-        intermedio.add(e2);
-        
-        List<Equipo> fin = new ArrayList<>();
-        fin.add(e3);
-        
+        Equipo r = new Equipo();
+        Equipo a = new Equipo();
+        Equipo v = new Equipo();
 
         
-        Corredor c1 = new Corredor("Corredor 1A", inicio);
-        Corredor c2 = new Corredor("Corredor 1B", inicio);
-        Corredor c3 = new Corredor("Corredor 1C", inicio);
+        Corredor c1 = new Corredor("1R", r, 1);
+        Corredor c2 = new Corredor("3R", r, 2);
+        Corredor c3 = new Corredor("2R", r, 3);
         
-        Corredor c4 = new Corredor("Corredor 2A", intermedio);
-        Corredor c5 = new Corredor("Corredor 2B", intermedio);
-        Corredor c6 = new Corredor("Corredor 2C", intermedio);
+        Corredor c4 = new Corredor("1A", a, 1);
+        Corredor c5 = new Corredor("3A", a, 2);
+        Corredor c6 = new Corredor("2A", a, 3);
         
-        Corredor c7 = new Corredor("Corredor 3A", fin);
-        Corredor c8 = new Corredor("Corredor 3B", fin);
-        Corredor c9 = new Corredor("Corredor 3C", fin);
+        Corredor c7 = new Corredor("1V", v, 1);
+        Corredor c8 = new Corredor("3V", v, 2);
+        Corredor c9 = new Corredor("2V", v, 3);
+
         
         c1.start();
         c2.start();
         c3.start();
-     /*   c4.start();
+        
+        c4.start();
         c5.start();
         c6.start();
+        
         c7.start();
         c8.start();
-        c9.start();*/
+        c9.start();
         
         
-        
-        try {  
-            Thread.sleep(5000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+
+          
         c1.interrupt();
         c2.interrupt();
         c3.interrupt();
-      /*  c4.interrupt();
+        
+        c4.interrupt();
         c5.interrupt();
         c6.interrupt();
+        
         c7.interrupt();
         c8.interrupt();
-        c9.interrupt();*/
-        
-        //&& !c4.isAlive() && !c5.isAlive() && !c6.isAlive() && !c7.isAlive() && !c8.isAlive() && !c9.isAlive()
+        c9.interrupt();
+
+
+       /*
         while(true) {
-            if(!c1.isAlive() && !c2.isAlive() && !c3.isAlive() ) {
+            if(!c1.isAlive() && !c2.isAlive()) {
                 break;
             }
             try {
@@ -84,8 +75,9 @@ public class Principal {
             }
         }        
         
-        System.out.println("Fin");
-        
+        System.out.println("Fin");*/
+
+
     }
     
     
